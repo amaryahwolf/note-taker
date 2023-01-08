@@ -39,9 +39,10 @@ app.post('/notes', (req, res) => {
   });
 
   app.delete('/notes/:id', (req, res) => {
-    console.log(req.params.id);
-    deleteAndUpdate(req.params.id, './db/db.json');
-    res.json(req.params.id)
+    const { id } = req.params;
+    console.log(id);
+    deleteAndUpdate(id, './db/db.json');
+    res.json(id)
   });
 
 module.exports = app;
