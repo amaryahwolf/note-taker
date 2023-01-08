@@ -1,7 +1,7 @@
 // Require libraries and files
 const express = require('express');
 const path = require('path');
-const api = require('./routes/notes');
+const api = require('./routes/notes.js');
 
 // Initialize server app and server it will run on
 const PORT = process.env.port ||  3001;
@@ -10,8 +10,8 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
 app.use(express.static('public'));
+app.use('/api', api);
 
 // GET route for notes page
 app.get('/notes', (req, res) =>
