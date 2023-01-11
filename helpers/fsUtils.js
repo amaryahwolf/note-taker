@@ -30,7 +30,7 @@ const readAndAppend = (content, file) => {
     }
   });
 };
-
+// Function to delete data and return a new array
 const deleteAndUpdate = (deleteId, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
