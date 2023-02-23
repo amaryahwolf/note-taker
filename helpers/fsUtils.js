@@ -43,7 +43,7 @@ const deleteAndUpdate = (deleteId, file) => {
         if (note.id !== deleteId) {
           updatedData.push(note);
         }
-      }    
+      }
       writeToFile(file, updatedData);
     }
   });
